@@ -56,7 +56,7 @@ def quit_app():
     exit(0)
     
 def get_news():
-    api_key = 'aff3cb2dd5bc4e17b7814b63d6ca044c'
+    api_key = ''
     url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={api_key}'
     
     try:
@@ -77,7 +77,7 @@ def get_news():
         speak("Sorry, I couldn't fetch the news at the moment.")
         
 def get_temperature(city):
-    api_key = '13a07014f3d3e6119169e3bfcc42ea98'
+    api_key = ''
     try:
         owm = OWM(api_key)
         mgr = owm.weather_manager()
@@ -184,9 +184,9 @@ def main_game_logic():
         speak(f"Sorry, you've used all your chances. The correct number was {x}. Better luck next time!")
         print(f"\nThe number was {x}. Better luck next time!")
         
-SPOTIPY_CLIENT_ID = "9f59eeb81f2f48f2a7ae456aa19e40f1"
-SPOTIPY_CLIENT_SECRET = "25704918fcd74b52be3df24250b26c3d"
-SPOTIPY_REDIRECT_URI = "http://localhost:8080/callback"
+SPOTIPY_CLIENT_ID = ""
+SPOTIPY_CLIENT_SECRET = ""
+SPOTIPY_REDIRECT_URI = ""
 
 scope = "user-read-playback-state,user-modify-playback-state"
 spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(
@@ -196,7 +196,7 @@ spotify = spotipy.Spotify(auth_manager=SpotifyOAuth(
     scope=scope
 ))
 
-PLAYLIST_URI = "spotify:playlist:31ELYZyhSwqzRI89rfdiFq?si=ATTxlIzTQ4mju5iQXs8fnA"
+PLAYLIST_URI = "spotify:playlist:?si=ATTxlIzTQ4mju5iQXs8fnA"
         
 def play_spotify_playlist():
     try:
